@@ -1,0 +1,5 @@
+Service Inventory is deployed as {{ .Release.Name }}-service-inventory.
+
+Verify it:
+  kubectl port-forward svc/{{ .Release.Name }}-service-inventory 8000:8000
+  curl http://127.0.0.1:8000/health
